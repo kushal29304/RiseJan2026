@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+</head>
+<body>
+    <form action="Submit.html">
+        <fieldset>
+            <legend>Form</legend>
+            <div>
+               <label for="">Full name:</label>
+            <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            placeholder="Firstname_Lastname"> 
+            </div>
+            <br>
+            <div>
+                <label for="About">About Yourself:</label>
+                <textarea name="About" id="ab_yourself"
+                rows="5"
+                cols="50"
+                placeholder="Write only 2 sentences."></textarea>
+            </div>
+            <br>
+            <div>
+                <label for="email">Email Address:</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <br>
+            <div>
+                <label for="pswd">Password:</label>
+                <input type="password" name="pswd" id="pswd" minlength="8">
+            </div>
+            <br>
+            <div>
+                <label for="phoneno">Phone Number:</label>
+                <input type="tel" 
+                name="phoneno" 
+                id="phoneno" 
+                maxlength="10"
+                minlength="10"
+                pattern="[0-9]{10}">
+            </div>
+            <br>
+            <div>
+                <label for="web">Website:</label>
+                <input type="url" name="web" id="web">
+            </div>
+            <br>
+            <hr>
+            
+                <label for="skills">Skills:</label>
+                <input type="checkbox" 
+                name="skills" 
+                id="html" 
+                value="HTML" 
+                checked>
+                <label for="html">HTML</label>
+                <input type="checkbox" name="skills" id="css">
+                <label for="css">CSS</label>
+                <input type="checkbox" name="skills" id="javascript">
+                <label for="javascript">Javascript</label>
+            <div>
+                <label for="gender">Gender:</label>
+                <input type="checkbox" name="male" id="gender">
+                <label for="male">Male</label>
+                <input type="checkbox" name="female" id="gender">
+                <label for="female">Female</label>
+            </div>
+            <div>
+                <label for="color">Preffered Color:</label>
+                <input type="color" name="color" id="color" value="#800080">
+            </div>
+            <div>
+                <label for="explev">Experience Level:</label>
+                <input type="range" 
+                name="explev" 
+                id="explev" 
+                min="0" 
+                max="10" 
+                step="2" 
+                value="4"
+                oninput="this.nextElementSibling.value = this.value">
+                <output for="volume">4</output>
+            </div>
+            <div>
+                <label for="search">Search:</label>
+                <input type="search" name="search" id="search">
+            </div>
+            <hr>
+            <div>
+                <label for="dob">Date of Birth</label>
+                <input type="date" name="dob" id="dob" max="2005-12-31">
+            </div>
+
+            <div>
+                <label for="avail_time">Available Time (09:00–18:30):</label>
+                <input type="time" id="avail_time" name="availableTime" min="09:00" max="18:30">
+            </div>
+
+            <div>
+                <label for="joining_month">Joining Month:</label>
+                <select id="joining_month" name="joiningMonth">
+                    <option value="01" selected>January</option>
+                    <option value="02">February</option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                <label for="joining_date">Joining Date:</label>
+                <input type="date" id="joining_date" name="joiningDate" value="2026-01-09">
+            </div>
+
+            <div>
+                <label for="training_week">Training Week:</label>
+                <input type="text" id="training_week" name="trainingWeekDisplay" value="Week 7" readonly>
+                <input type="hidden" name="trainingWeek" value="7">
+            </div>
+
+            <div>
+                <label for="interview_slot">Interview Slot:</label>
+                <input type="time" id="interview_slot" name="interviewSlot">
+            </div>
+
+            <div>
+                <label>Technology:</label>
+                <input type="checkbox" id="tech_dotnet" name="technology" value=".Net">
+                <label for="tech_dotnet">.Net</label>
+                <input type="checkbox" id="tech_angular" name="technology" value="Angular">
+                <label for="tech_angular">Angular</label>
+                <input type="checkbox" id="tech_java" name="technology" value="Java">
+                <label for="tech_java">Java</label>
+                <input type="checkbox" id="tech_react" name="technology" value="ReactJS">
+                <label for="tech_react">ReactJS</label>
+                <input type="checkbox" id="tech_qa" name="technology" value="QA">
+                <label for="tech_qa">QA</label>
+            </div>
+
+            <div>
+                <label for="resume">Resume Upload (PDF):</label>
+                <input type="file" id="resume" name="resume" accept="application/pdf">
+            </div>
+
+            <input type="hidden" name="userId" value="dummy12345">
+
+            <div>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+                <button type="button">Button</button>
+            </div>
+            
+            
+            
+
+
+        </fieldset>
+    </form>
+    
+</body>
+</html>
