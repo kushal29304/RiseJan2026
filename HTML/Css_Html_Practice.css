@@ -1,0 +1,65 @@
+/* Page Background */
+body {
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(to bottom, #b2def2, #c6d6df);
+    font-family: Georgia, serif;
+}
+
+/* Main Heading */
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* First Paragraph Styling */
+.main-text {
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid black;
+    padding-bottom: 6px;
+}
+
+/* Second Paragraph Effects */
+.effects-text {
+    color: red;
+    text-transform: lowercase;
+    letter-spacing: 4px;
+    word-spacing: 10px;
+    text-shadow: 2px 2px 3px gray;
+    margin-top: 10px;
+}
+
+/* Section Heading */
+h2 {
+    margin-top: 30px;
+    font-size: 26px;
+}
+
+/* Common Box Styling */
+.box {
+    width: 260px;
+    height: 120px;
+    border: 2px solid black;
+    background-color: #d9e3ea;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Overflow Types */
+.visible {
+    overflow: visible;
+}
+
+.hidden {
+    overflow: hidden;
+}
+
+.scroll {
+    overflow: scroll;
+}
+
+.auto {
+    overflow: auto;
+}
