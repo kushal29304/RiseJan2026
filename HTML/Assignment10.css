@@ -1,0 +1,78 @@
+.para::first-letter{
+    font-size: 40px;
+    color: red;
+    font-weight: bold;
+}
+.para2::first-line {
+    background-color: wheat;
+    font-weight: bold;
+}
+.para3::before {
+    content: 'NOTE:';
+    color: red;
+    font-weight: bold;
+}
+.para4::after {
+    content: '© 2026';
+}
+li:first-child {
+    color: red;
+    background-color:rgb(109, 236, 240);
+}
+li:nth-child(2) {
+    font-weight: bold;
+    background-color: rgb(208, 242, 208);
+}
+li:nth-child(3) {
+    color: blue;
+    background-color: rgb(109, 236, 240);
+}
+li:nth-child(4) {
+    background-color: rgb(208, 242, 208);
+}
+li:last-child {
+    color: green;
+    background-color: rgb(109, 236, 240);
+}
+
+a[target="_blank"]{
+    color: red;
+}
+
+a[href^="https"]{
+    font-weight: bold;
+}
+
+a:hover{
+    color: green;
+}
+
+.container p{
+    color: rgb(233, 123, 243);
+    font-size: 18px;
+    font-style: italic;
+}
+
+.box > p{
+    color: green;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+h2 + p, h3 + p {
+    color: purple;
+    font-weight: bold;
+}
+
+h4 ~ p{
+    font-style: italic;
+}
+input:focus{
+    border: 2px solid blue;   /* Change border color */
+    outline: none;            /* Remove default browser outline */
+    background-color: #f0f8ff; /* Light background color */
+}
+input[type="checkbox"]:checked + label{
+    color: green;
+    font-weight: bold;
+}
