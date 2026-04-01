@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 4</title>
+  </head>
+  <body>
+    <h1>1. Employee Salary Processor</h1>
+    <label for="empname">Employee Name</label>
+    <input type="text" placeholder="Enter Employee Name" id="empname" />
+    <label for="empsalary">Your Salary</label>
+    <input type="number" placeholder="Enter Your Salary" id="empsalary" />
+    <br /><br />
+    <button id="processSalary">Process Salary</button>
+
+    <table border="1">
+      <tr>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Level</th>
+      </tr>
+      <tr>
+        <td id="empNameOutput"></td>
+        <td id="empSalaryOutput"></td>
+        <td id="empLevelOutput"></td>
+      </tr>
+    </table>
+
+    <hr />
+
+    <label for="orderid">Order ID</label>
+    <input type="text" id="orderid" />
+
+    <label for="orderamount">Order Amount</label>
+    <input type="number" id="orderamount" />
+
+    <label for="orderquantity">Order Quantity</label>
+    <input type="number" id="orderquantity" />
+
+    <button id="addorder">Add Order</button>
+
+    <table border="1">
+      <tr>
+        <th>Order ID</th>
+        <th>Order Amount</th>
+        <th>Order Quantity</th>
+      </tr>
+      <tr>
+        <td id="OrderIdOut"></td>
+        <td id="OrderAmountOut"></td>
+        <td id="OrderQuantityOut"></td>
+      </tr>
+    </table>
+
+    <p id="totalRevenueOut"></p>
+    <p id="totalQuantityOut"></p>
+
+    <button id="result">Show Results</button>
+    <script>
+      const empName = document.getElementById('empname');
+      const empSalary = document.getElementById('empsalary');
+
+      const empNameOutput = document.getElementById('empNameOutput');
+      const empSalaryOutput = document.getElementById('empSalaryOutput');
+      const empLevelOutput = document.getElementById('empLevelOutput');
+
+      const processSalaryBtn = document.getElementById('processSalary');
+
+      processSalaryBtn.addEventListener('click', function () {
+        const name = empName.value;
+        const salary = empSalary.value;
+
+        empNameOutput.innerText = name;
+        empSalaryOutput.innerText = salary;
+
+        if (empSalary.value > 40000) {
+          empSalaryOutput.style.color = 'green';
+          const increasedSalary = salary * 1.1;
+          empSalaryOutput.innerText = increasedSalary;
+        } else {
+          empSalaryOutput.style.color = 'red';
+        }
+
+        let level = '';
+        if (empSalaryOutput.innerText > 70000) {
+          level = 'Senior';
+        } else {
+          level = 'Mid';
+        }
+        empLevelOutput.innerText = level;
+      });
+    </script>
+    <script>
+      const orderId = document.getElementById('orderid');
+      const orderAmount = document.getElementById('orderamount');
+      const orderQuantity = document.getElementById('orderquantity');
+
+      const addOrderBtn = document.getElementById('addorder');
+      const resultBtn = document.getElementById('result');
+
+      let totalRevenue = 0;
+      let totalQuantity = 0;
+
+      addOrderBtn.addEventListener('click', function () {
+        const id = orderId.value;
+        const amount = orderAmount.value;
+        const quantity = orderQuantity.value;
+        OrderIdOut.innerText = id;
+        OrderAmountOut.innerText = amount;
+        OrderQuantityOut.innerText = quantity;
+
+        totalRevenue += amount * quantity;
+        totalQuantity += quantity;
+      });
+
+      resultBtn.addEventListener('click', function () {
+        totalRevenueOut.innerText = 'Total Revenue: ' + totalRevenue;
+        totalQuantityOut.innerText = 'Total Quantity: ' + totalQuantity;
+      });
+    </script>
+  </body>
+</html>
