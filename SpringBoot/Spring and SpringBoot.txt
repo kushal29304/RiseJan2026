@@ -1,0 +1,12 @@
+What is Spring?
+Inversion of Control(IOC) and Dependency Injection(DI)
+Bean: any object managed by the spring IOC container is called Bean.
+Bean annotations:
+@Component:- generic bean
+@Service:- business logic
+@Respository:- Database layer for data access
+@Controller:- 
+
+What is Spring Boot?
+What are annotations?
+It provide metadata about or code, allowing us to configure and customize out application.
